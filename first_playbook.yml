@@ -1,0 +1,20 @@
+- hosts: localhost
+  tasks:
+      - name: create file
+        file:
+            path: /tmp/yallo
+            state: touch
+
+  tasks:   
+      - name: create user
+        user: 
+            name: mario
+            shell: /bin/bash
+
+
+      - name: install zlib
+        yum:
+            name: zlib 
+            state: latest
+
+  sudo: yes
